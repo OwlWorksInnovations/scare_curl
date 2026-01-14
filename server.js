@@ -8,12 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.status(200).setHeader('Content-Type', 'text/html; charset=utf-8');
     res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', 'keep-alive');
 
-    res.write(`
-<!DOCTYPE html>
+    res.write(`<!DOCTYPE html>
 <html>
 <head>
     <title>Scare Stream</title>
@@ -56,21 +54,21 @@ app.get('/', (req, res) => {
 <body>
     <div class="terminal">
         <div class="header">╔═══════════════════════════════════════════════════════════════╗</div>
-        <div class="header">║  Run with: curl https://your-domain.com/stream              ║</div>
+        <div class="header">║  Run with: curl https://your-domain.com/raw               ║</div>
         <div class="header">╚═══════════════════════════════════════════════════════════════╝</div>
-        <div class="instructions">Streaming output...</div>
+        <div class="instructions">Terminal: curl https://your-domain.com/raw</div>
         <pre id="output"></pre>
     </div>
     <script>
-        const eventSource = new EventSource('/events');
+        const eventSource = new EventSource('/stream');
         eventSource.onmessage = function(e) {
             document.getElementById('output').textContent += e.data;
             window.scrollTo(0, document.body.scrollHeight);
         };
     </script>
 </body>
-</html>
-`);
+</html>`);
+    res.end();
 });
 
 app.get('/stream', (req, res) => {
