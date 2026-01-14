@@ -312,11 +312,6 @@ show_credits() {
 main() {
     trap 'echo -e "\n\n${GREEN}[+] Prank complete! Thanks for playing.${RESET}"; exit 0' INT
 
-    if [ ! -t 0 ]; then
-        echo "[-] This script requires a terminal."
-        exit 1
-    fi
-
     show_banner
     sleep 1
 
