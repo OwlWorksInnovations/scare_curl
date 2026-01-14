@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --omit=dev
 
-COPY scare.sh ./
+COPY server.js scare.sh ./
 RUN chmod +x scare.sh
 
 EXPOSE 3000

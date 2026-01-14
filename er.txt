@@ -1,79 +1,96 @@
-scheduling build on Metal builder "builder-myjrob"
-scheduling build on Metal builder "builder-myjrob"
-[snapshot] received sha256:7bc12130785b4a11758b2a4cde542e9f41c0bb2cab2d71b258436a8e081b30b1 md5:191c322beb6c58a2ddb3e04466eae01d
-receiving snapshot
-5.1 KB
-333ms
-found 'Dockerfile' at 'Dockerfile'
-found 'railway.json' at 'railway.json'
-analyzing snapshot
-5.1 KB
-2ms
-uploading snapshot
-5.1 KB
-22ms
-fetched snapshot sha256:7bc12130785b4a11758b2a4cde542e9f41c0bb2cab2d71b258436a8e081b30b1 (5.2 kB bytes)
-fetching snapshot
-5.1 KB
-200ms
-unpacking archive
-30 KB
-1ms
-
-internal
-load build definition from Dockerfile
-0ms
-
-internal
-load metadata for docker.io/library/node:18-alpine
-131ms
-
-internal
-load .dockerignore
-0ms
-
-1
-FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
-10ms
-
-internal
-load build context
-0ms
-
-3
-COPY package*.json ./ cached
-0ms
-
-2
-WORKDIR /app cached
-0ms
-
-4
-RUN npm ci --only=production
-774ms
-npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
-npm error code EUSAGE
-npm error
-npm error The `npm ci` command can only install with an existing package-lock.json or
-npm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or
-npm error later to generate a package-lock.json file, then try again.
-npm error
-npm error Clean install a project
-npm error
-npm error Usage:
-npm error npm ci
-npm error
-npm error Options:
-npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
-npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
-npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
-npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
-npm error [--no-bin-links] [--no-fund] [--dry-run]
-npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
-npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
-npm error
-npm error aliases: clean-install, ic, install-clean, isntall-clean
-npm error
-npm error Run "npm help ci" for more info
-npm error A complete log of this run can be found in: /root/.npm/_logs/2026-01-14T08_50_04_655Z-debug-0.log
-Build Failed: build daemon returned an error < failed to solve: process "/bin/sh -c npm ci --only=production" did not complete successfully: exit code: 1 >
+Starting Container
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+Node.js v18.20.8
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+Node.js v18.20.8
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+Node.js v18.20.8
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+Node.js v18.20.8
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+Node.js v18.20.8
+  requireStack: []
+}
+Node.js v18.20.8
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+node:internal/modules/cjs/loader:1143
+  throw err;
+  ^
+Node.js v18.20.8
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+node:internal/modules/cjs/loader:1143
+Node.js v18.20.8
+  throw err;
+  ^
+Error: Cannot find module '/app/server.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
+    at Module._load (node:internal/modules/cjs/loader:981:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
