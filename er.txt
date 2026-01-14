@@ -1,96 +1,83 @@
+juan@DESKTOP-G3PCTFN:/mnt/c/Users/juanp/Documents/development/t$ curl https://scarecurl-production.up.railway.app/
+{"status":"error","code":502,"message":"Application failed to respond","request_id":"fRFihK93ToeT5zuyjUJq2g"}juan@DESKTOP-G3PCTFN:/mnt/c/Users/juanp/Documents/development/t$
+
+scheduling build on Metal builder "builder-myjrob"
+scheduling build on Metal builder "builder-myjrob"
+[snapshot] received sha256:d7d4b05b90caa76f54477969f55093eb7772d10625fe0c3649ef1182f4ebef21 md5:b27d435365cafe0cc9ccffd9acf5aa67
+receiving snapshot
+5.4 KB
+477ms
+found 'Dockerfile' at 'Dockerfile'
+found 'railway.json' at 'railway.json'
+analyzing snapshot
+5.4 KB
+uploading snapshot
+5.4 KB
+fetched snapshot sha256:d7d4b05b90caa76f54477969f55093eb7772d10625fe0c3649ef1182f4ebef21 (5.5 kB bytes)
+fetching snapshot
+5.4 KB
+227ms
+unpacking archive
+30 KB
+1ms
+
+internal
+load build definition from Dockerfile
+0ms
+
+internal
+load metadata for docker.io/library/node:18-alpine
+393ms
+
+internal
+load .dockerignore
+0ms
+
+1
+FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+16ms
+
+internal
+load build context
+0ms
+
+4
+RUN npm install --omit=dev cached
+0ms
+
+3
+COPY package*.json ./ cached
+0ms
+
+2
+WORKDIR /app cached
+0ms
+
+5
+COPY server.js scare.sh ./
+145ms
+
+6
+RUN chmod +x scare.sh
+245ms
+ 
+====================
+Starting Healthcheck
+====================
+Path: /
+Retry window: 5m0s
+ 
+
+exporting to docker image format
+582ms
+containerimage.descriptor: eyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2NpLmltYWdlLm1hbmlmZXN0LnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NjdmMTAxZjExYmJiMGI5MDEwMzNjNjFhMDJiYzFiODBlNzY0YzY1MzgzMWZjNTYxODIyOWExMDNjMWExZDc4OSIsInNpemUiOjE5OTksImFubm90YXRpb25zIjp7Im9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5jcmVhdGVkIjoiMjAyNi0wMS0xNFQwODo1OTowNVoifSwicGxhdGZvcm0iOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQiLCJvcyI6ImxpbnV4In19
+containerimage.config.digest: sha256:5a148fe0f1a7b84c7bd378cefe5f83c3adda0fe1cad3dd57d6ee1923a5e6fb97
+containerimage.digest: sha256:67f101f11bbb0b901033c61a02bc1b80e764c653831fc5618229a103c1a1d789
+image push
+45.1 MB
+4.2s
+[1/1] Healthcheck succeeded!
+
 Starting Container
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-Node.js v18.20.8
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-Node.js v18.20.8
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-Node.js v18.20.8
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-Node.js v18.20.8
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-Node.js v18.20.8
-  requireStack: []
-}
-Node.js v18.20.8
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-node:internal/modules/cjs/loader:1143
-  throw err;
-  ^
-Node.js v18.20.8
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-node:internal/modules/cjs/loader:1143
-Node.js v18.20.8
-  throw err;
-  ^
-Error: Cannot find module '/app/server.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1140:15)
-    at Module._load (node:internal/modules/cjs/loader:981:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
+Scare server running on port 8080
+curl localhost:8080/raw
